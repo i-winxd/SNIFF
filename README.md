@@ -3,7 +3,7 @@ Tool to convert charts made in FL Studio to .json files usable in [Friday Night 
 
 Developed for use internally at SiIvaGunner.
 
-# Fork modifications
+# Changes
 Added Kade Engine 1.6 support. See details on release.
 
 # Credits
