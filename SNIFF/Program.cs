@@ -95,6 +95,7 @@ namespace SNIFF
 			Globals.player2 = "";
 			Globals.gfVersion = "";
 			Globals.noteStyle = "";
+			Globals.stage = "";
 		}
 
 		public static FLNote MakeNote(float strumTime, int noteData, float sustainLength, bool mustHitSection, float bpm)
