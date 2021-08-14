@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
@@ -333,7 +333,7 @@ namespace SNIFF
 				};
 				notes.Add(n);
 #if DEBUG
-										Console.WriteLine("note added");
+									//	Console.WriteLine("note added");
 #endif
 				i += Globals.NoteSize;
 			}
@@ -370,28 +370,28 @@ namespace SNIFF
 			
 			// string time!!!
 			if (Globals.player1 == "") {
-				Console.Write("player1 (bf, dad, gf, spooky, pico, mom, mom-car, bf-car, parents-christmas, gf-christmas, monster, bf-pixel, senpai, senpai-angry, spirit. see assets\\data\\characterList.txt): ");
+				Console.Write("player1\n(bf, dad, gf, spooky, pico, mom, mom-car, bf-car, parents-christmas, gf-christmas, monster, bf-pixel, senpai, senpai-angry, spirit)\nsee assets\\data\\characterList.txt: ");
 				Globals.player1 = Console.ReadLine();
 			}
 			song.Add("player1", Globals.player1);
 			// end of player 1 =================
 			
 			if (Globals.player2 == "") {
-				Console.Write("player2 (see assets\\data\\characterList.txt): ");
+				Console.Write("player2\n(Check above for vanilla characters. See assets\\data\\characterList.txt): ");
 				Globals.player2 = Console.ReadLine();
 			}
 			song.Add("player2", Globals.player2);
 			// end of player 2 =================
 			
 			if (Globals.gfVersion == "") {
-				Console.Write("gfVersion (gf, gf-car, gf-christmas, gf-pixel. see assets\\data\\gfVersionList.txt): ");
+				Console.Write("gfVersion\n(gf, gf-car, gf-christmas, gf-pixel)\nsee assets\\data\\gfVersionList.txt: ");
 				Globals.gfVersion = Console.ReadLine();
 			}
 			song.Add("gfVersion", Globals.gfVersion);			
 			// end of gfVersion selection =================
 			
 			if (Globals.stage == "") {
-				Console.Write("stage (stage, halloween, philly, limo, mall, mallEvil, school, schoolEvil. see assets\\data\\stageList.txt): ");
+				Console.Write("stage\n(stage, halloween, philly, limo, mall, mallEvil, school, schoolEvil)\nsee assets\\data\\stageList.txt): ");
 				Globals.stage = Console.ReadLine();
 			}
 			song.Add("stage", Globals.stage);
@@ -593,7 +593,7 @@ namespace SNIFF
 			song.Add("notes", JArray.FromObject(sections));
 			JObject file = new JObject {
 					{ "song", song },
-					{ "generatedBy", "SNIFF ver." + Globals.VersionNumber }
+					{ "generatedBy", "SNIFF ver." + Globals.VersionNumber + " with Kade Engine support" }
 				};
 			return file;
 		}
@@ -683,7 +683,7 @@ namespace SNIFF
 		[STAThread]
 		static void Main(string[] args)
 		{
-			Console.WriteLine("SiIva Note Importer For FNF (SNIFF)\nquite pungent my dear... version  "+ Globals.VersionNumber +"\n");
+			Console.WriteLine("SiIva Note Importer For FNF (SNIFF) with Kade Engine 1.6 support\nquite pungent my dear... version  "+ Globals.VersionNumber +"\n");
 			OpenFileDialog fileBrowser = new OpenFileDialog {
 				InitialDirectory = Directory.GetCurrentDirectory(),
 				Filter = "FL Studio file (*.fsc, *.flp)|*.fsc;*.flp|JSON file (*.json)|*.json|All files (*.*)|*.*",
