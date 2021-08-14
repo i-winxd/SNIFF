@@ -333,7 +333,7 @@ namespace SNIFF
 				};
 				notes.Add(n);
 #if DEBUG
-									//	Console.WriteLine("note added");
+										Console.WriteLine("note added");
 #endif
 				i += Globals.NoteSize;
 			}
