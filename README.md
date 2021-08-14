@@ -4,4 +4,7 @@ Tool to convert charts made in FL Studio to .json files usable in [Friday Night 
 Developed for use internally at SiIvaGunner.
 
 # Fork modifications
-Added Kade Engine 1.6 support. Okay google, how do I compile this
+Added Kade Engine 1.6 support. See details on release.
+
+# Credits
+The original repo can be found here: https://github.com/PrincessMtH/SNIFF
