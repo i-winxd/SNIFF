@@ -40,6 +40,9 @@ namespace SNIFF
 		public static int needsVoices = 0; //0 = undecided, -1 = false, 1 = true
 		public static string player1 = "";
 		public static string player2 = "";
+		public static string gfVersion = "";
+		public static string stage = "";
+		public static string noteStyle = "";
 	}
 
 	public enum MIDINotes
@@ -90,6 +93,8 @@ namespace SNIFF
 			Globals.needsVoices = 0;
 			Globals.player1 = "";
 			Globals.player2 = "";
+			Globals.gfVersion = "";
+			Globals.noteStyle = "";
 		}
 
 		public static FLNote MakeNote(float strumTime, int noteData, float sustainLength, bool mustHitSection, float bpm)
@@ -361,16 +366,43 @@ namespace SNIFF
 				Globals.needsVoices = Console.ReadLine().ToLower().Trim() == "n" ? -1 : 1;
 			}
 			song.Add("needsVoices", Globals.needsVoices > 0);
+			
+			// string time!!!
 			if (Globals.player1 == "") {
-				Console.Write("player1 (see assets\\data\\characterList.txt): ");
+				Console.Write("player1 (bf, dad, gf, spooky, pico, mom, mom-car, bf-car, parents-christmas, gf-christmas, monster, bf-pixel, senpai, senpai-angry, spirit. see assets\\data\\characterList.txt): ");
 				Globals.player1 = Console.ReadLine();
 			}
 			song.Add("player1", Globals.player1);
+			// end of player 1 =================
+			
 			if (Globals.player2 == "") {
 				Console.Write("player2 (see assets\\data\\characterList.txt): ");
 				Globals.player2 = Console.ReadLine();
 			}
 			song.Add("player2", Globals.player2);
+			// end of player 2 =================
+			
+			if (Globals.gfVersion == "") {
+				Console.Write("gfVersion (gf, gf-car, gf-christmas, gf-pixel. see assets\\data\\gfVersionList.txt): ");
+				Globals.gfVersion = Console.ReadLine();
+			}
+			song.Add("gfVersion", Globals.gfVersion);			
+			// end of gfVersion selection =================
+			
+			if (Globals.stage == "") {
+				Console.Write("stage (stage, halloween, philly, limo, mall, mallEvil, school, schoolEvil. see assets\\data\\stageList.txt): ");
+				Globals.stage = Console.ReadLine();
+			}
+			song.Add("stage", Globals.stage);
+			
+			//end of stage =================
+			if (Globals.noteStyle == "") {
+				Console.Write("noteStyle (normal or pixel, see assets\\data\\noteStyleList.txt): ");
+				Globals.noteStyle = Console.ReadLine();
+			}
+			song.Add("noteStyle", Globals.noteStyle);
+			
+			// end of string detection =================
 			Console.Write("speed: ");
 			song.Add("speed", float.Parse(Console.ReadLine()));
 			int enableChangeBPM = 0; // 0 = no, 1 = yes, 2 = yes and use bpmList.txt
