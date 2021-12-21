@@ -10,7 +10,7 @@ Open SNIFF dot exe and select the \*.json file. The program should create a fl s
 Open the "Friday Night Funkin'" template. Fill in the notes for all patterns (it should be straightforward, as the project template __labels everything__). Afterwards, you can save the project as the same name or a different name. Open SNIFF, select the \*.flp file you want to target. If you've got it correct, the program will ask you which characters should be associated with the chart, the BPM, and whether you want separate voices. You will then be prompted to enter scroll speeds for each difficulty. Each time you enter a scroll speed, you will be prompted to save a \*.json file for that difficulty. If you are doing all difficulties, you will do this three times.
 
 # Changes
-Added Kade Engine 1.6 support. See details on release.
+Made characters more clear, and allows you to specify stage, notestyle, and gf version.
 
 # Credits
 The original repo can be found here: https://github.com/PrincessMtH/SNIFF
