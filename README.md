@@ -1,4 +1,7 @@
 # SiIva Note Importer For FNF
+**Want to generate your charts directly from midi without manually arranging your notes? Consider using this tool:**
+https://github.com/i-winxd/Funkin-Chart-Generator
+
 Tool to convert charts made in FL Studio's piano roll to .json files usable in [Friday Night Funkin'](https://github.com/ninjamuffin99/Funkin).
 Imagine using FnF's chart editor smh
 
